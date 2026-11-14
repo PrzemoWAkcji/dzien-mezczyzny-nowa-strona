@@ -109,3 +109,25 @@ body{font-family:'Open Sans',Arial,sans-serif}
 @media(max-width:1000px){.masthead{height:130px}.masthead .brand{width:min(100%,730px)}}
 @media(max-width:760px){.site-header{background:var(--accent)}.masthead{height:59px;background:var(--accent)}.masthead .brand{width:100%}.brand-picture img{width:100%;max-height:50px;object-fit:contain}.search-panel label{color:white}.feature-thumbs{gap:6px;min-height:64px;padding:7px}.feature-thumb{height:45px}.feature-card{min-height:410px}.feature-content{padding:20px}.feature-content h2{font-size:28px}.lead-side{margin-top:20px}.side-story{padding:13px 0}.side-story h3{font-size:14px}}
 @media(max-width:470px){.masthead{height:53px}.brand-picture img{max-height:44px}.feature-card{min-height:385px}.feature-content h2{font-size:25px}.feature-thumb{height:38px}.feature-thumbs{min-height:54px}}
+
+/* Korekta: mniejsze logo i paleta zgodna z oryginałem (czerwień #ef4135, czerń, neutralne szarości). */
+:root{--paper:#f7f7f7;--ink:#333;--muted:#777;--accent:#ef4135;--line:#e5e5e5;--forest:#111;--sage:#fff}
+.preview-note{background:#000;color:#ddd}
+.preview-note span{color:#ef4135}
+.masthead{height:104px}
+.masthead .brand{width:min(100%,520px)}
+.footer-brand img{width:min(100%,300px)}
+.nav-band,.search-row button{background:#ef4135}
+.main-nav a:hover,.icon-button:hover{background:#d93631}
+.site-footer{background:#fff;border-top:1px solid #e5e5e5}
+.footer-bottom{border-top-color:#e5e5e5}
+.story-image{background:#eee}
+.quote-band{background:#000;color:#fff}
+.quote-asterisk,.quote-inner .kicker,.quote-inner p em{color:#ef4135}
+.feature-content>.story-category{color:#fff;background:#ef4135;padding:5px 9px;margin-bottom:2px}
+.topic-section{background:#fff;border-color:#e5e5e5}
+.topic-links button{border-color:#e0e0e0}
+.article-source{background:#f0f0f0}
+@media(max-width:1000px){.masthead{height:96px}.masthead .brand{width:min(100%,470px)}}
+@media(max-width:760px){.masthead{height:56px}.masthead .brand{width:100%}.brand-picture img{max-height:40px}}
+@media(max-width:470px){.masthead{height:50px}.brand-picture img{max-height:34px}}
