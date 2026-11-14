@@ -25,7 +25,8 @@ function storyCard(post, index) {
 function renderHome(posts) {
   const feature = posts[0];
   $('#feature').innerHTML = `<a class="feature-image" href="${articleUrl(feature)}"><img src="${esc(feature.image)}" alt=""></a><div class="feature-content"><span class="feature-label">Temat tygodnia <span>↗</span></span><span class="story-category">${esc(feature.category)}</span><h2><a href="${articleUrl(feature)}">${esc(feature.title)}</a></h2><p>${esc(feature.summary)}</p><a class="feature-cta" href="${articleUrl(feature)}">Przeczytaj artykuł <span>↗</span></a></div>`;
-  $('#lead-side-list').innerHTML = posts.slice(1, 4).map((post, index) => `<article class="side-story"><a href="${articleUrl(post)}" class="side-image"><img src="${esc(post.image)}" alt="" ${index ? 'loading="lazy"' : ''}></a><div><span class="story-category">${esc(post.category)}</span><h3><a href="${articleUrl(post)}">${esc(post.title)}</a></h3><time datetime="${esc(post.date)}">${dateLabel(post.date)}</time></div></article>`).join('');
+  $('#feature-thumbs').innerHTML = posts.slice(0, 5).map((post, index) => `<a href="${articleUrl(post)}" class="feature-thumb${index === 0 ? ' active' : ''}" aria-label="${esc(post.title)}"><img src="${esc(post.image)}" alt="" loading="lazy"></a>`).join('');
+  $('#lead-side-list').innerHTML = posts.slice(1, 7).map((post, index) => `<article class="side-story"><a href="${articleUrl(post)}" class="side-image"><img src="${esc(post.image)}" alt="" ${index ? 'loading="lazy"' : ''}></a><div><span class="story-category">${esc(post.category)}</span><h3><a href="${articleUrl(post)}">${esc(post.title)}</a></h3><time datetime="${esc(post.date)}">${dateLabel(post.date)}</time></div></article>`).join('');
   let activeFilter = 'all';
   let search = '';
   const cards = $('#story-grid');
