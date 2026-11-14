@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5f0">
+  <meta name="description" content="Prototyp nowej strony magazynu Dzień Mężczyzny.">
+  <title>Dzień Mężczyzny — nowa odsłona</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body data-page="home">
+  <div class="preview-note">Projekt nowej odsłony serwisu <span>·</span> prototyp</div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./" aria-label="Dzień Mężczyzny — strona główna"><span class="brand-mark">D<span class="brand-dot">.</span>M</span><span class="brand-name">DZIEŃ<br>MĘŻCZYZNY</span></a>
+      <nav class="main-nav" id="main-nav" aria-label="Nawigacja główna"><a href="#artykuly">Najnowsze</a><a href="#tematy">Tematy</a><a href="#wybrane">Polecamy</a><a href="https://www.dzienmezczyzny.pl/redakcja/">O redakcji</a></nav>
+      <div class="header-actions"><button class="icon-button search-toggle" type="button" aria-label="Otwórz wyszukiwarkę" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button><button class="icon-button menu-toggle" type="button" aria-label="Otwórz menu" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button></div>
+    </div>
+    <form class="search-panel container" id="search-form" role="search" hidden><label for="search-input">Szukaj w artykułach</label><div class="search-row"><input id="search-input" type="search" placeholder="Wpisz temat, np. zdrowie" autocomplete="off"><button type="submit">Szukaj <span aria-hidden="true">↗</span></button></div></form>
+  </header>
+
+  <main>
+    <section class="intro container"><div><span class="eyebrow"><span class="eyebrow-line"></span> Magazyn dla ciekawych świata</span><h1>Warto wiedzieć.<br><em>Warto żyć po swojemu.</em></h1></div><p>Zdrowie, relacje, pasje i codzienne wybory. Historie i informacje, do których chce się wracać.</p></section>
+
+    <section class="lead-grid container" aria-label="Wyróżnione artykuły"><article class="feature-card" id="feature"></article><div class="lead-side"><div class="section-head compact"><div><span class="kicker">01 / Na początek</span><h2>Na czasie</h2></div><span class="section-rule"></span></div><div id="lead-side-list"></div></div></section>
+
+    <section class="topic-section" id="tematy"><div class="container topic-inner"><div><span class="kicker">Odkrywaj</span><h2>Co Cię interesuje?</h2></div><div class="topic-links"><button type="button" data-filter="all" class="active">Wszystkie <span>↗</span></button><button type="button" data-filter="Zdrowie">Zdrowie <span>↗</span></button><button type="button" data-filter="Relacje">Relacje <span>↗</span></button><button type="button" data-filter="Moto & technologia">Moto & tech <span>↗</span></button><button type="button" data-filter="Kariera">Kariera <span>↗</span></button></div></div></section>
+
+    <section class="stories-section container" id="artykuly"><div class="section-head"><div><span class="kicker">02 / Czytaj dalej</span><h2>Najnowsze historie<span class="accent">.</span></h2></div><p>Wybrane artykuły z obecnego serwisu<br> w świeższej, wygodniejszej oprawie.</p></div><div class="story-grid" id="story-grid"></div><p class="empty-state" id="empty-state" hidden>Nie znaleziono artykułów. Spróbuj innego hasła.</p></section>
+
+    <section class="quote-band" id="wybrane"><div class="container quote-inner"><span class="quote-asterisk">✳</span><div><span class="kicker">Nowa odsłona</span><p>Treści, które zostają z Tobą <em>na dłużej.</em></p></div><a class="text-link" href="#artykuly">Przeglądaj artykuły <span>↗</span></a></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-top"><div><a class="brand footer-brand" href="./"><span class="brand-mark">D<span class="brand-dot">.</span>M</span><span class="brand-name">DZIEŃ<br>MĘŻCZYZNY</span></a><p>Magazyn o tym, co ważne, ciekawe i bliskie życiu.</p></div><div class="footer-links"><a href="https://www.dzienmezczyzny.pl/redakcja/">Redakcja</a><a href="https://www.dzienmezczyzny.pl/redakcja/kontakt/">Kontakt</a><a href="https://www.dzienmezczyzny.pl/">Obecna strona</a></div></div><div class="container footer-bottom"><span>© 2026 Dzień Mężczyzny</span><span>Projekt koncepcyjny · treści i zdjęcia: dzienmezczyzny.pl</span></div></footer>
+</body>
+</html>

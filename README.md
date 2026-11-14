@@ -1,5 +1,12 @@
-<img src="assets/icon.svg" width="64" height="64" alt="">
+# Dzień Mężczyzny — prototyp nowej strony
 
-# Dzień Mężczyzny nowa strona
+Statyczny podgląd nowej strony głównej i szablonu artykułu dla [dzienmezczyzny.pl](https://www.dzienmezczyzny.pl/). To projekt koncepcyjny, niezależny od działającego WordPressa.
 
-Created in [T3 Code](https://t3.codes).
+## Co działa
+
+- układ dostosowany do telefonu i komputera,
+- filtrowanie i wyszukiwanie ośmiu przykładowych artykułów,
+- widok artykułu z odsyłaczem do pełnej publikacji,
+- treści i zoptymalizowane zdjęcia pobrane z publicznego WordPress API.
+
+Pliki są statyczne i nadają się do publikacji bez procesu budowania. Aktualizację próbki treści uruchamia się przez `python3 scripts/build_content.py` (wymaga Pillow).
