@@ -131,3 +131,7 @@ body{font-family:'Open Sans',Arial,sans-serif}
 @media(max-width:1000px){.masthead{height:96px}.masthead .brand{width:min(100%,470px)}}
 @media(max-width:760px){.masthead{height:56px}.masthead .brand{width:100%}.brand-picture img{max-height:40px}}
 @media(max-width:470px){.masthead{height:50px}.brand-picture img{max-height:34px}}
+
+/* Facebook jak w obecnym serwisie: przycisk obok wyszukiwarki. */
+.header-actions .fb-link{display:grid;place-items:center}
+.icon-button.fb-link svg{fill:currentColor;stroke:none;width:18px;height:18px}

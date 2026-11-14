@@ -63,6 +63,13 @@ function renderArticle(posts) {
   const id = Number(new URLSearchParams(location.search).get('id')) || posts[0].id;
   const post = posts.find((item) => item.id === id) || posts[0];
   document.title = `${post.title} — Dzień Mężczyzny`;
+  const abs = (path) => new URL(path, location.href).href;
+  const setMeta = (selector, value) => { const el = document.querySelector(selector); if (el) el.setAttribute('content', value); };
+  const summary = post.summary || '';
+  setMeta('meta[property="og:title"]', post.title); setMeta('meta[name="twitter:title"]', post.title);
+  setMeta('meta[property="og:description"]', summary); setMeta('meta[name="twitter:description"]', summary);
+  setMeta('meta[property="og:url"]', location.href);
+  setMeta('meta[property="og:image"]', abs(post.image)); setMeta('meta[name="twitter:image"]', abs(post.image));
   const body = post.body.map((block) => `<${block.type}>${esc(block.text)}</${block.type}>`).join('');
   const related = posts.filter((item) => item.id !== post.id).slice(0, 3);
   $('#article-root').innerHTML = `<div class="breadcrumb"><a href="./">Strona główna</a><span> / </span><a href="./#artykuly">Artykuły</a><span> / </span>${esc(post.category)}</div><div class="article-heading"><span class="story-category">${esc(post.category)}</span><h1>${esc(post.title)}</h1><p class="article-lead">${esc(post.summary)}</p><div class="article-meta"><time datetime="${esc(post.date)}">${dateLabel(post.date)}</time><span class="meta-dot">●</span><span>Dzień Mężczyzny</span></div></div><figure class="article-cover"><img src="${esc(post.image)}" alt=""><figcaption>Zdjęcie z oryginalnego artykułu w serwisie Dzień Mężczyzny</figcaption></figure><div class="article-layout"><div class="article-body">${body}<div class="article-source"><span class="kicker">Pełna publikacja</span><p>To podgląd nowego układu artykułu. Pełny tekst znajduje się w obecnym serwisie.</p><a href="${esc(post.source)}" target="_blank" rel="noopener noreferrer">Otwórz oryginalny artykuł <span>↗</span></a></div></div><aside class="article-aside"><span class="kicker">W tym magazynie</span><h2>Odkrywaj więcej.</h2><p>Wybierz temat, który Cię interesuje, i czytaj dalej.</p><a href="./#artykuly">Zobacz artykuły <span>↗</span></a></aside></div><section class="related-section"><div class="section-head"><div><span class="kicker">Czytaj dalej</span><h2>Może Cię zainteresować<span class="accent">.</span></h2></div></div><div class="story-grid">${related.map(storyCard).join('')}</div></section>`;
